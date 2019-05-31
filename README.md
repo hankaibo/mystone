@@ -1,4 +1,5 @@
 # mystone
+[![Build Status](https://travis-ci.org/hankaibo/mystone.svg?branch=master)](https://travis-ci.org/hankaibo/mystone)
 
 A tool library for me.
 
