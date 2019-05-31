@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>chunk.js - Documentation</title>
+    <title>difference.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">chunk.js</h1>
+    <h1 class="page-title">difference.js</h1>
     
 
     
@@ -43,22 +43,22 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Chunks an array into smaller arrays of specified size.
+ * Returns the difference between two arrays.
  *
  * @since 0.0.1
- * @param {array} arr The array every was called upon.
- * @returns {number} size
+ * @param {array} a The array every was called upon.
+ * @returns {array} b The array every was called upon.
  * @example
  *
- * chunk([1,2,3,4,5],2); // [[1,2],[3,4],[5]]
+ * difference([1,2,3],[1,2,4]); // [3]
  */
 
-const chunk = (arr, size) =>
-  Array.from({length: Math.ceil(arr.length / size)}, (v, i) =>
-    arr.slice(i * size, i * size + size)
-  );
+const difference = (a, b) => {
+  const s = new Set(b);
+  return a.filter(x => !s.has(x));
+};
 
-export default chunk;
+export default difference;
 </code></pre>
         </article>
     </section>

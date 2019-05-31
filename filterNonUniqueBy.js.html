@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>chunk.js - Documentation</title>
+    <title>filterNonUniqueBy.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">chunk.js</h1>
+    <h1 class="page-title">filterNonUniqueBy.js</h1>
     
 
     
@@ -43,22 +43,30 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Chunks an array into smaller arrays of specified size.
+ * 根据提供的比较器函数筛选出数组中的非唯一值。
  *
  * @since 0.0.1
- * @param {array} arr The array every was called upon.
- * @returns {number} size
+ * @param {array} arr - 数组。
+ * @param {function} fn - 函数。
+ * @returns {array} 一个过滤后的新数组。
  * @example
  *
- * chunk([1,2,3,4,5],2); // [[1,2],[3,4],[5]]
+ * filterNonUniqueBy(
+ *    [
+ *      {id:0,value: 'a'},
+ *      {id:1,value: 'b'},
+ *      {id:2,value: 'c'},
+ *      {id:1,value: 'd'},
+ *      {id:0,value: 'e'}
+ *    ],
+ *    (a,b)=>a.id==b.id
+ * ); // [{id:2,value:'c'}]
  */
 
-const chunk = (arr, size) =>
-  Array.from({length: Math.ceil(arr.length / size)}, (v, i) =>
-    arr.slice(i * size, i * size + size)
-  );
+const filterNonUniqueBy = (arr, fn) =>
+  arr.filter((v, i) => arr.every((x, j) => (i === j) === fn(v, x, i, j)));
 
-export default chunk;
+export default filterNonUniqueBy;
 </code></pre>
         </article>
     </section>

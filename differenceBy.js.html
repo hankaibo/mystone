@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>chunk.js - Documentation</title>
+    <title>differenceBy.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">chunk.js</h1>
+    <h1 class="page-title">differenceBy.js</h1>
     
 
     
@@ -43,22 +43,26 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Chunks an array into smaller arrays of specified size.
+ * 返回使用过滤函数之后的两个数组的差异。
  *
  * @since 0.0.1
- * @param {array} arr The array every was called upon.
- * @returns {number} size
+ * @param {array} a - 数组a。
+ * @param {array} b - 数组b。
+ * @param {array} fn - 过滤函数。
+ * @returns {array} 先过滤函数再用数组a减去数组b。
  * @example
  *
- * chunk([1,2,3,4,5],2); // [[1,2],[3,4],[5]]
+ * differenceBy([2.1,1.2],[2.3,3.4],Math.floor); // [1]
+ *
+ * differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]
  */
 
-const chunk = (arr, size) =>
-  Array.from({length: Math.ceil(arr.length / size)}, (v, i) =>
-    arr.slice(i * size, i * size + size)
-  );
+const differenceBy = (a, b, fn) => {
+  const s = new Set(b.map(fn));
+  return a.map(fn).filter(el => !s.has(el));
+};
 
-export default chunk;
+export default differenceBy;
 </code></pre>
         </article>
     </section>

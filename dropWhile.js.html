@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>chunk.js - Documentation</title>
+    <title>dropWhile.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">chunk.js</h1>
+    <h1 class="page-title">dropWhile.js</h1>
     
 
     
@@ -43,22 +43,23 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Chunks an array into smaller arrays of specified size.
+ * 删除数组中的元素，直到传递的函数返回true。返回数组中的其余元素。
  *
  * @since 0.0.1
- * @param {array} arr The array every was called upon.
- * @returns {number} size
+ * @param {array} arr - 要删除的原数组。
+ * @param {function} func - 条件函数。
+ * @returns {array} 返回一个新数组。
  * @example
  *
- * chunk([1,2,3,4,5],2); // [[1,2],[3,4],[5]]
+ * dropWhile([1,2,3,4], n=>n>=3); // [3,4]
  */
 
-const chunk = (arr, size) =>
-  Array.from({length: Math.ceil(arr.length / size)}, (v, i) =>
-    arr.slice(i * size, i * size + size)
-  );
+const dropWhile = (arr, func) => {
+  while (arr.length > 0 &amp;&amp; !func(arr[0])) arr = arr.slice(1);
+  return arr;
+};
 
-export default chunk;
+export default dropWhile;
 </code></pre>
         </article>
     </section>

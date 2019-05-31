@@ -27,7 +27,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#all">all</a></li><li><a href="global.html#allEqual">allEqual</a></li><li><a href="global.html#any">any</a></li><li><a href="global.html#arrayToCSV">arrayToCSV</a></li><li><a href="global.html#bifurcate">bifurcate</a></li><li><a href="global.html#bifurcateBy">bifurcateBy</a></li><li><a href="global.html#chunk">chunk</a></li><li><a href="global.html#classof">classof</a></li><li><a href="global.html#compack">compack</a></li><li><a href="global.html#countBy">countBy</a></li><li><a href="global.html#countOccurrences">countOccurrences</a></li><li><a href="global.html#deepFlatten">deepFlatten</a></li><li><a href="global.html#difference">difference</a></li><li><a href="global.html#differenceBy">differenceBy</a></li><li><a href="global.html#differenceWith">differenceWith</a></li><li><a href="global.html#drop">drop</a></li><li><a href="global.html#dropRight">dropRight</a></li><li><a href="global.html#dropRightWhile">dropRightWhile</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#all">all</a></li><li><a href="global.html#allEqual">allEqual</a></li><li><a href="global.html#any">any</a></li><li><a href="global.html#arrayToCSV">arrayToCSV</a></li><li><a href="global.html#bifurcate">bifurcate</a></li><li><a href="global.html#bifurcateBy">bifurcateBy</a></li><li><a href="global.html#chunk">chunk</a></li><li><a href="global.html#classof">classof</a></li><li><a href="global.html#compact">compact</a></li><li><a href="global.html#countBy">countBy</a></li><li><a href="global.html#countOccurrences">countOccurrences</a></li><li><a href="global.html#deepFlatten">deepFlatten</a></li><li><a href="global.html#difference">difference</a></li><li><a href="global.html#differenceBy">differenceBy</a></li><li><a href="global.html#differenceWith">differenceWith</a></li><li><a href="global.html#drop">drop</a></li><li><a href="global.html#dropRight">dropRight</a></li><li><a href="global.html#dropRightWhile">dropRightWhile</a></li><li><a href="global.html#dropWhile">dropWhile</a></li><li><a href="global.html#everyNth">everyNth</a></li><li><a href="global.html#filterFalsy">filterFalsy</a></li><li><a href="global.html#filterNonUnique">filterNonUnique</a></li><li><a href="global.html#filterNonUniqueBy">filterNonUniqueBy</a></li></ul>
 </nav>
 
 <div id="main">
@@ -1561,7 +1561,7 @@ at least one element in a collection, false otherwise.</p>
 
     
 
-    <h4 class="name" id="compack"><span class="type-signature"></span>compack<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id="compact"><span class="type-signature"></span>compact<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
 
     
 
@@ -1629,7 +1629,7 @@ at least one element in a collection, false otherwise.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>compack([0,1,false,2,'',3,'a','e'*23,NaN,'s',34]); // [1,2,3,'a','s',34]</code></pre>
+    <pre class="prettyprint"><code>compact([0,1,false,2,'',3,'a','e'*23,NaN,'s',34]); // [1,2,3,'a','s',34]</code></pre>
 
 
 
@@ -2239,7 +2239,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="diffenrence.js.html">diffenrence.js</a>, <a href="diffenrence.js.html#line12">line 12</a>
+        <a href="difference.js.html">difference.js</a>, <a href="difference.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -2405,7 +2405,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="diffenrenceBy.js.html">diffenrenceBy.js</a>, <a href="diffenrenceBy.js.html#line16">line 16</a>
+        <a href="differenceBy.js.html">differenceBy.js</a>, <a href="differenceBy.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -2448,7 +2448,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
 
 <div class="description">
-    <p>Returns the difference between two arrays, after applying the provided function to each array element of both.</p>
+    <p>返回使用过滤函数之后的两个数组的差异。</p>
 </div>
 
 
@@ -2509,7 +2509,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>数组a。</p></td>
         </tr>
 
     
@@ -2532,7 +2532,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>数组b。</p></td>
         </tr>
 
     
@@ -2555,7 +2555,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>过滤函数。</p></td>
         </tr>
 
     
@@ -2581,7 +2581,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
         
 <div class="param-desc">
-    <p>b The array every was called upon.</p>
+    <p>先过滤函数再用数组a减去数组b。</p>
 </div>
 
 
@@ -2607,7 +2607,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
     
 
-    <h4 class="name" id="differenceWith"><span class="type-signature"></span>differenceWith<span class="signature">(a, b, fn)</span><span class="type-signature"> &rarr; {array}</span></h4>
+    <h4 class="name" id="differenceWith"><span class="type-signature"></span>differenceWith<span class="signature">(arr, val, comp)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -2619,7 +2619,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="diffenrenceWith.js.html">diffenrenceWith.js</a>, <a href="diffenrenceWith.js.html#line16">line 16</a>
+        <a href="differenceWith.js.html">differenceWith.js</a>, <a href="differenceWith.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -2662,7 +2662,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
 
 <div class="description">
-    <p>Filters out all values from an array for which the comparator function does not return true.</p>
+    <p>过滤掉比较器函数未返回true的数组中的所有值。</p>
 </div>
 
 
@@ -2707,7 +2707,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
         <tr>
             
-                <td class="name"><code>a</code></td>
+                <td class="name"><code>arr</code></td>
             
 
             <td class="type">
@@ -2723,20 +2723,20 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>数组。</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>b</code></td>
+                <td class="name"><code>val</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">array</span>
+<span class="param-type">number</span>
 
 
             
@@ -2746,20 +2746,20 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>值。</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>fn</code></td>
+                <td class="name"><code>comp</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">array</span>
+<span class="param-type">function</span>
 
 
             
@@ -2769,7 +2769,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>比较函数。</p></td>
         </tr>
 
     
@@ -2795,7 +2795,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
         
 <div class="param-desc">
-    <p>b The array every was called upon.</p>
+    <p>一个新数组。</p>
 </div>
 
 
@@ -3462,6 +3462,914 @@ Returns the remaining elements in the array.</p>
 
 
         
+            
+
+    
+
+    <h4 class="name" id="dropWhile"><span class="type-signature"></span>dropWhile<span class="signature">(arr, func)</span><span class="type-signature"> &rarr; {array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dropWhile.js.html">dropWhile.js</a>, <a href="dropWhile.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.0.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>删除数组中的元素，直到传递的函数返回true。返回数组中的其余元素。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>dropWhile([1,2,3,4], n=>n>=3); // [3,4]</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要删除的原数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>条件函数。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>返回一个新数组。</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="everyNth"><span class="type-signature"></span>everyNth<span class="signature">(arr, nth)</span><span class="type-signature"> &rarr; {array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="everyNth.js.html">everyNth.js</a>, <a href="everyNth.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.0.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>返回数组中的每个第n个元素</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>everyNth([1,2,3,4,5,6],2); // [2,4,6]</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>nth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>第n个元素。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>一个过滤后的新数组。</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="filterFalsy"><span class="type-signature"></span>filterFalsy<span class="signature">(arr)</span><span class="type-signature"> &rarr; {array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="filterFalsy.js.html">filterFalsy.js</a>, <a href="filterFalsy.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.0.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>过滤掉数组中的假值。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>filterFalsy(['',true,{},false,'sample',1,0]); // [true,{},'sample',1];</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数组。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>一个过滤后的新数组。</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="filterNonUnique"><span class="type-signature"></span>filterNonUnique<span class="signature">(arr)</span><span class="type-signature"> &rarr; {array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="filterNonUnique.js.html">filterNonUnique.js</a>, <a href="filterNonUnique.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.0.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>过滤掉数组中的非唯一值。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>filterNonUnique([1,2,2,3,4,4,5]); // [1,3,5]</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数组。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>一个过滤后的新数组。</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="filterNonUniqueBy"><span class="type-signature"></span>filterNonUniqueBy<span class="signature">(arr, fn)</span><span class="type-signature"> &rarr; {array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="filterNonUniqueBy.js.html">filterNonUniqueBy.js</a>, <a href="filterNonUniqueBy.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.0.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>根据提供的比较器函数筛选出数组中的非唯一值。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>filterNonUniqueBy(
+   [
+     {id:0,value: 'a'},
+     {id:1,value: 'b'},
+     {id:2,value: 'c'},
+     {id:1,value: 'd'},
+     {id:0,value: 'e'}
+   ],
+   (a,b)=>a.id==b.id
+); // [{id:2,value:'c'}]</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>函数。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>一个过滤后的新数组。</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
     
 
     
@@ -3481,7 +4389,7 @@ Returns the remaining elements in the array.</p>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Fri May 31 2019 07:21:01 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Fri May 31 2019 07:39:10 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

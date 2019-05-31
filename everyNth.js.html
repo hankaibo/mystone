@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>chunk.js - Documentation</title>
+    <title>everyNth.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">chunk.js</h1>
+    <h1 class="page-title">everyNth.js</h1>
     
 
     
@@ -43,22 +43,20 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Chunks an array into smaller arrays of specified size.
+ * 返回数组中的每个第n个元素
  *
  * @since 0.0.1
- * @param {array} arr The array every was called upon.
- * @returns {number} size
+ * @param {array} arr - 数组。
+ * @param {number} nth - 第n个元素。
+ * @returns {array} 一个过滤后的新数组。
  * @example
  *
- * chunk([1,2,3,4,5],2); // [[1,2],[3,4],[5]]
+ * everyNth([1,2,3,4,5,6],2); // [2,4,6]
  */
 
-const chunk = (arr, size) =>
-  Array.from({length: Math.ceil(arr.length / size)}, (v, i) =>
-    arr.slice(i * size, i * size + size)
-  );
+const everyNth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
 
-export default chunk;
+export default everyNth;
 </code></pre>
         </article>
     </section>
