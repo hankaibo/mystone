@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>demo</title>
+  <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.js"></script>
+  <script src="../dist/mystone.js"></script>
+</head>
+
+<body>
+<pre>
+      var obj = {
+          className: 'class1',
+          name: 'lily'
+      };
+      mystone.parseParam(obj); // "name=tom&class.className=class1&classMates[0].name=lily"
+      mystone.parseParam(obj, 'stu'); // "stu.name=tom&stu.class.className=class1&stu.classMates[0].name=lily"
+  </pre>
+
+<script>
+var obj = {
+  name: 'tom',
+  'class': {
+    className: 'class1'
+  },
+  classMates: [{
+    name: 'lily'
+  }]
+};
+console.log(mystone.parseParam(obj));
+console.log(mystone.parseParam(obj, 'stu'));
+
+</script>
+</body>
+
+</html>
