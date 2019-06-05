@@ -7,7 +7,7 @@
  * @returns {array} 返回一个新数组。
  * @example
  *
- * dropWhile([1,2,3,4], n=>n>=3); // [3,4]
+ * dropWhile([1, 2, 3, 4], n=> n >= 3); // [3,4]
  */
 
 const dropWhile = (arr, func) => {

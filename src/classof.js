@@ -1,25 +1,16 @@
 /**
- * Returns true if the provided predicate function returns true for
- * at least one element in a collection, false otherwise.
+ * 判断一个对象的类型。
  *
  * @since 0.0.1
- * @param {object} o The array every was called upon.
+ * @param {object} o - 要判断的对象。
+ * @returns {string} 小写的对象的类型。
  * @example
  *
- * classof(['123']); // => 'Array'
+ * classof(['123']); // 'array'
+ *
+ * classof(null); // 'object'
  */
 
-const classof = o => {
-  if (o === null) {
-    return "Null";
-  }
-  if (o === undefined) {
-    return "Undefined";
-  }
-  if (typeof o !== "object" && typeof o !== "function") {
-    throw TypeError;
-  }
-  return Object.prototype.toString.call(o).slice(8, -1);
-};
+const classof = o => Object.prototype.toString.call(o).slice(8, -1).toLowerCase();
 
 export default classof;

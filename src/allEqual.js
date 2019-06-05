@@ -6,9 +6,9 @@
  * @returns {boolean} 所有元素相等，返回true；否则返回false.
  * @example
  *
- * allEqual([1,2,3,4,5,6]); // => false
+ * allEqual([1,2,3,4,5,6]); // false
  *
- * allEqual([1,1,1,1]); // => true
+ * allEqual([1,1,1,1]); // true
  */
 const allEqual = arr => arr.every(val => val === arr[0]);
 

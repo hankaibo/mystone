@@ -1,12 +1,13 @@
 /**
- * Groups the elements of an array based on the given function and returns the count of elements in each group.
+ * 根据给定的函数对数组元素进行分组，并返回每组元素的计数。
  *
  * @since 0.0.1
- * @param {array} arr The array every was called upon.
- * @returns {function} fn
+ * @param {array} arr - 要分组的数组。
+ * @param {function} fn - 条件函数。
+ * @returns {object} 条件函数计数对象。
  * @example
  *
- * countBy([6.1,4.2,6.3],Math.floor); // {4:1, 6:2}
+ * countBy([6.1,4.2,6.3], Math.floor); // {4:1, 6:2}
  *
  * countBy(['one','two','three'], 'length'); // {3:2, 5:1}
  */

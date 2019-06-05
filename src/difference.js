@@ -1,12 +1,13 @@
 /**
- * Returns the difference between two arrays.
+ * 返回两个数组的差集。
  *
  * @since 0.0.1
- * @param {array} a The array every was called upon.
- * @returns {array} b The array every was called upon.
+ * @param {array} a - 第一个数组。
+ * @param {array} b - 第二个数组。
+ * @returns {array} 第一个数组与第二个数组的差集。
  * @example
  *
- * difference([1,2,3],[1,2,4]); // [3]
+ * difference([1, 2, 3], [1, 2, 4]); // [3]
  */
 
 const difference = (a, b) => {

@@ -1,18 +1,17 @@
 /**
- * Returns a new array with n elements removed from the right.
+ * 返回从右侧删除n个元素的新数组。
  *
  * @since 0.0.1
- * @param {array} a The array every was called upon.
- * @param {array} b The array every was called upon.
- * @param {array} fn The array every was called upon.
- * @returns {array} b The array every was called upon.
+ * @param {array} arr - 原数组。
+ * @param {number} n - 开始的索引。
+ * @returns {array} 一个到右侧索引的新数组。
  * @example
  *
- * dropRight([1,2,3]); // [1,2]
+ * dropRight([1, 2, 3]); // [1,2]
  *
- * dropRight([1,2,3],2); // [1]
+ * dropRight([1, 2, 3], 2); // [1]
  *
- * dropRight([1,2,3],42); // []
+ * dropRight([1, 2, 3], 42); // []
  */
 
 const dropRight = (arr, n = 1) => arr.slice(0, -n);

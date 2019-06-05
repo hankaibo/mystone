@@ -7,9 +7,9 @@
  * @returns {boolean} 如果有至少一个元素通过则返回true，否则返回false.
  * @example
  *
- * any([0,1,2,0], x=>x>=2); // => true
+ * any([0,1,2,0], x=>x>=2); // true
  *
- * any([0,0,1,0]); // => true
+ * any([0,0,1,0]); //  true
  */
 const any = (arr, fn = Boolean) => arr.some(fn);
 

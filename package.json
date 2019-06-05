@@ -1,6 +1,6 @@
 {
   "name": "mystone",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "A tool library for me.",
   "main": "src/index.js",
   "scripts": {

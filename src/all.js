@@ -7,9 +7,9 @@
  * @returns {boolean} 如果提供的函数对数组中的所有元素返回true，则返回true，否则返回false.
  * @example
  *
- * all([4,2,3], x=>x>1); // => true
+ * all([4,2,3], x=>x>1); // true
  *
- * all([1,2,3]); // => true
+ * all([1,2,3]); // true
  */
 const all = (arr, fn = Boolean) => arr.every(fn);
 

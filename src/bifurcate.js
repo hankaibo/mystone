@@ -8,7 +8,7 @@
  * @returns {array} 一个新数组，第一部分是满足过滤函数的，第二部分是不满足的。
  * @example
  *
- * bifurcate(['beep','boop','foo','bar'],[true,true,false,true]); // [['beep','boop','bar'],['foo']] *
+ * bifurcate(['beep','boop','foo','bar'], [true,true,false,true]); // [['beep','boop','bar'], ['foo']]
  */
 
 const bifurcate = (arr, filter) =>

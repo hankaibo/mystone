@@ -6,7 +6,7 @@
  * @returns {array} 一个过滤后的新数组。
  * @example
  *
- * filterFalsy(['',true,{},false,'sample',1,0]); // [true,{},'sample',1];
+ * filterFalsy(['', true, {}, false, 'sample', 1, 0]); // [true,{},'sample',1];
  */
 
 const filterFalsy = arr => arr.filter(Boolean);

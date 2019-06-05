@@ -7,7 +7,7 @@
  * @returns {array} 一个过滤后的新数组。
  * @example
  *
- * everyNth([1,2,3,4,5,6],2); // [2,4,6]
+ * everyNth([1, 2, 3, 4, 5, 6], 2); // [2,4,6]
  */
 
 const everyNth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
