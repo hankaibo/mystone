@@ -27,7 +27,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#all">all</a></li><li><a href="global.html#allEqual">allEqual</a></li><li><a href="global.html#any">any</a></li><li><a href="global.html#arrayToCSV">arrayToCSV</a></li><li><a href="global.html#bifurcate">bifurcate</a></li><li><a href="global.html#bifurcateBy">bifurcateBy</a></li><li><a href="global.html#chunk">chunk</a></li><li><a href="global.html#classof">classof</a></li><li><a href="global.html#compact">compact</a></li><li><a href="global.html#countBy">countBy</a></li><li><a href="global.html#countOccurrences">countOccurrences</a></li><li><a href="global.html#deepFlatten">deepFlatten</a></li><li><a href="global.html#difference">difference</a></li><li><a href="global.html#differenceBy">differenceBy</a></li><li><a href="global.html#differenceWith">differenceWith</a></li><li><a href="global.html#drop">drop</a></li><li><a href="global.html#dropRight">dropRight</a></li><li><a href="global.html#dropRightWhile">dropRightWhile</a></li><li><a href="global.html#dropWhile">dropWhile</a></li><li><a href="global.html#everyNth">everyNth</a></li><li><a href="global.html#filterFalsy">filterFalsy</a></li><li><a href="global.html#filterNonUnique">filterNonUnique</a></li><li><a href="global.html#filterNonUniqueBy">filterNonUniqueBy</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#all">all</a></li><li><a href="global.html#allEqual">allEqual</a></li><li><a href="global.html#any">any</a></li><li><a href="global.html#arrayToCSV">arrayToCSV</a></li><li><a href="global.html#bifurcate">bifurcate</a></li><li><a href="global.html#bifurcateBy">bifurcateBy</a></li><li><a href="global.html#chunk">chunk</a></li><li><a href="global.html#classof">classof</a></li><li><a href="global.html#compact">compact</a></li><li><a href="global.html#countBy">countBy</a></li><li><a href="global.html#countOccurrences">countOccurrences</a></li><li><a href="global.html#deepFlatten">deepFlatten</a></li><li><a href="global.html#difference">difference</a></li><li><a href="global.html#differenceBy">differenceBy</a></li><li><a href="global.html#differenceWith">differenceWith</a></li><li><a href="global.html#drop">drop</a></li><li><a href="global.html#dropRight">dropRight</a></li><li><a href="global.html#dropRightWhile">dropRightWhile</a></li><li><a href="global.html#dropWhile">dropWhile</a></li><li><a href="global.html#everyNth">everyNth</a></li><li><a href="global.html#filterFalsy">filterFalsy</a></li><li><a href="global.html#filterNonUnique">filterNonUnique</a></li><li><a href="global.html#filterNonUniqueBy">filterNonUniqueBy</a></li><li><a href="global.html#findLast">findLast</a></li><li><a href="global.html#findLastIndex">findLastIndex</a></li></ul>
 </nav>
 
 <div id="main">
@@ -192,9 +192,9 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>all([4,2,3], x=>x>1); // => true
+    <pre class="prettyprint"><code>all([4,2,3], x=>x>1); // true
 
-all([1,2,3]); // => true</code></pre>
+all([1,2,3]); // true</code></pre>
 
 
 
@@ -383,9 +383,9 @@ all([1,2,3]); // => true</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>allEqual([1,2,3,4,5,6]); // => false
+    <pre class="prettyprint"><code>allEqual([1,2,3,4,5,6]); // false
 
-allEqual([1,1,1,1]); // => true</code></pre>
+allEqual([1,1,1,1]); // true</code></pre>
 
 
 
@@ -551,9 +551,9 @@ allEqual([1,1,1,1]); // => true</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>any([0,1,2,0], x=>x>=2); // => true
+    <pre class="prettyprint"><code>any([0,1,2,0], x=>x>=2); // true
 
-any([0,0,1,0]); // => true</code></pre>
+any([0,0,1,0]); //  true</code></pre>
 
 
 
@@ -742,11 +742,11 @@ any([0,0,1,0]); // => true</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>arrayToCSV([['a','b'],['c','d']]); // '"a","b"\n"c","d"'
+    <pre class="prettyprint"><code>arrayToCSV([['a','b'], ['c','d']]); // '"a","b"\n"c","d"'
 
-arrayToCSV([['a','b'],['c','d']], ';'); // '"a";"b"\n"c";"d"'
+arrayToCSV([['a','b'], ['c','d']], ';'); // '"a";"b"\n"c";"d"'
 
-arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415' *</code></pre>
+arrayToCSV([['a','"b" great'], ['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415' *</code></pre>
 
 
 
@@ -944,7 +944,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>bifurcate(['beep','boop','foo','bar'],[true,true,false,true]); // [['beep','boop','bar'],['foo']] *</code></pre>
+    <pre class="prettyprint"><code>bifurcate(['beep','boop','foo','bar'], [true,true,false,true]); // [['beep','boop','bar'], ['foo']]</code></pre>
 
 
 
@@ -1065,7 +1065,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
     
 
-    <h4 class="name" id="bifurcateBy"><span class="type-signature"></span>bifurcateBy<span class="signature">(arr, fn)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    <h4 class="name" id="bifurcateBy"><span class="type-signature"></span>bifurcateBy<span class="signature">(arr, fn)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -1119,6 +1119,10 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
 
 
+<div class="description">
+    <p>根据指定函数对数组进行过滤，符合条件的属于第一部分，否则属于第二部分。</p>
+</div>
+
 
 
 
@@ -1129,7 +1133,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>bifurcate(['beep','boop','foo','bar'],x=>x[0]==='b'); // [['beep','boop','bar'],['foo']] *</code></pre>
+    <pre class="prettyprint"><code>bifurcate(['beep','boop','foo','bar'], x=>x[0]==='b'); // [['beep','boop','bar'], ['foo']]</code></pre>
 
 
 
@@ -1175,7 +1179,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>被判断的数组。</p></td>
         </tr>
 
     
@@ -1198,7 +1202,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>指定的函数。</p></td>
         </tr>
 
     
@@ -1224,7 +1228,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
         
 <div class="param-desc">
-    <p>fn</p>
+    <p>一个新数组，第一部分是满足过滤函数的，第二部分是不满足的。</p>
 </div>
 
 
@@ -1235,7 +1239,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
     </dt>
     <dd>
         
-<span class="param-type">function</span>
+<span class="param-type">array</span>
 
 
     </dd>
@@ -1250,7 +1254,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
     
 
-    <h4 class="name" id="chunk"><span class="type-signature"></span>chunk<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id="chunk"><span class="type-signature"></span>chunk<span class="signature">(arr, size)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -1262,7 +1266,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="chunk.js.html">chunk.js</a>, <a href="chunk.js.html#line12">line 12</a>
+        <a href="chunk.js.html">chunk.js</a>, <a href="chunk.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -1305,7 +1309,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
 
 <div class="description">
-    <p>Chunks an array into smaller arrays of specified size.</p>
+    <p>将数组分成指定大小的较小数组。</p>
 </div>
 
 
@@ -1318,7 +1322,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>chunk([1,2,3,4,5],2); // [[1,2],[3,4],[5]]</code></pre>
+    <pre class="prettyprint"><code>chunk([1,2,3,4,5], 2); // [[1,2],[3,4],[5]]</code></pre>
 
 
 
@@ -1364,7 +1368,30 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>要分割的数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>指定块的大小。</p></td>
         </tr>
 
     
@@ -1390,7 +1417,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
         
 <div class="param-desc">
-    <p>size</p>
+    <p>一个指定大小的新数组。</p>
 </div>
 
 
@@ -1401,7 +1428,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
     </dt>
     <dd>
         
-<span class="param-type">number</span>
+<span class="param-type">array</span>
 
 
     </dd>
@@ -1416,7 +1443,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
     
 
-    <h4 class="name" id="classof"><span class="type-signature"></span>classof<span class="signature">(o)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="classof"><span class="type-signature"></span>classof<span class="signature">(o)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
@@ -1428,7 +1455,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="classof.js.html">classof.js</a>, <a href="classof.js.html#line12">line 12</a>
+        <a href="classof.js.html">classof.js</a>, <a href="classof.js.html#line14">line 14</a>
     </li></ul></dd>
     
 
@@ -1471,8 +1498,7 @@ arrayToCSV([['a','"b" great'],['c',3.1415]]); // '"a","""b"" great"\n"c",3.1415'
 
 
 <div class="description">
-    <p>Returns true if the provided predicate function returns true for
-at least one element in a collection, false otherwise.</p>
+    <p>判断一个对象的类型。</p>
 </div>
 
 
@@ -1485,7 +1511,9 @@ at least one element in a collection, false otherwise.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>classof(['123']); // => 'Array'</code></pre>
+    <pre class="prettyprint"><code>classof(['123']); // 'array'
+
+classof(null); // 'object'</code></pre>
 
 
 
@@ -1531,7 +1559,7 @@ at least one element in a collection, false otherwise.</p>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>要判断的对象。</p></td>
         </tr>
 
     
@@ -1553,6 +1581,28 @@ at least one element in a collection, false otherwise.</p>
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>小写的对象的类型。</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -1561,7 +1611,7 @@ at least one element in a collection, false otherwise.</p>
 
     
 
-    <h4 class="name" id="compact"><span class="type-signature"></span>compact<span class="signature">(arr)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id="compact"><span class="type-signature"></span>compact<span class="signature">(arr)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -1616,7 +1666,7 @@ at least one element in a collection, false otherwise.</p>
 
 
 <div class="description">
-    <p>Removes falsey values from an array.</p>
+    <p>从数组中删除假值。</p>
 </div>
 
 
@@ -1629,7 +1679,7 @@ at least one element in a collection, false otherwise.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>compact([0,1,false,2,'',3,'a','e'*23,NaN,'s',34]); // [1,2,3,'a','s',34]</code></pre>
+    <pre class="prettyprint"><code>compact([0, 1, false, 2, '', 3, 'a', 'e'*23, NaN, 's', 34]); // [1,2,3,'a','s',34]</code></pre>
 
 
 
@@ -1675,7 +1725,7 @@ at least one element in a collection, false otherwise.</p>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>要判断的数组。</p></td>
         </tr>
 
     
@@ -1701,7 +1751,7 @@ at least one element in a collection, false otherwise.</p>
 
         
 <div class="param-desc">
-    <p>size</p>
+    <p>移除假值后的新数组。</p>
 </div>
 
 
@@ -1712,7 +1762,7 @@ at least one element in a collection, false otherwise.</p>
     </dt>
     <dd>
         
-<span class="param-type">number</span>
+<span class="param-type">array</span>
 
 
     </dd>
@@ -1727,7 +1777,7 @@ at least one element in a collection, false otherwise.</p>
 
     
 
-    <h4 class="name" id="countBy"><span class="type-signature"></span>countBy<span class="signature">(arr)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    <h4 class="name" id="countBy"><span class="type-signature"></span>countBy<span class="signature">(arr, fn)</span><span class="type-signature"> &rarr; {object}</span></h4>
 
     
 
@@ -1739,7 +1789,7 @@ at least one element in a collection, false otherwise.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="countBy.js.html">countBy.js</a>, <a href="countBy.js.html#line14">line 14</a>
+        <a href="countBy.js.html">countBy.js</a>, <a href="countBy.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -1782,7 +1832,7 @@ at least one element in a collection, false otherwise.</p>
 
 
 <div class="description">
-    <p>Groups the elements of an array based on the given function and returns the count of elements in each group.</p>
+    <p>根据给定的函数对数组元素进行分组，并返回每组元素的计数。</p>
 </div>
 
 
@@ -1795,7 +1845,7 @@ at least one element in a collection, false otherwise.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>countBy([6.1,4.2,6.3],Math.floor); // {4:1, 6:2}
+    <pre class="prettyprint"><code>countBy([6.1,4.2,6.3], Math.floor); // {4:1, 6:2}
 
 countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
@@ -1843,7 +1893,30 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>要分组的数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>条件函数。</p></td>
         </tr>
 
     
@@ -1869,7 +1942,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
         
 <div class="param-desc">
-    <p>fn</p>
+    <p>条件函数计数对象。</p>
 </div>
 
 
@@ -1880,7 +1953,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">function</span>
+<span class="param-type">object</span>
 
 
     </dd>
@@ -1895,7 +1968,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
     
 
-    <h4 class="name" id="countOccurrences"><span class="type-signature"></span>countOccurrences<span class="signature">(arr)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    <h4 class="name" id="countOccurrences"><span class="type-signature"></span>countOccurrences<span class="signature">(arr, val)</span><span class="type-signature"> &rarr; {number}</span></h4>
 
     
 
@@ -1907,7 +1980,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="countOccurrences.js.html">countOccurrences.js</a>, <a href="countOccurrences.js.html#line12">line 12</a>
+        <a href="countOccurrences.js.html">countOccurrences.js</a>, <a href="countOccurrences.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -1950,7 +2023,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
 
 <div class="description">
-    <p>Counts the occurrences of a value in an array.</p>
+    <p>计算数组中某个值的出现次数。</p>
 </div>
 
 
@@ -1963,7 +2036,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>countOccurrences([1,1,2,1,2,3],1); //3</code></pre>
+    <pre class="prettyprint"><code>countOccurrences([1,1,2,1,2,3], 1); // 3</code></pre>
 
 
 
@@ -2009,7 +2082,30 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>发判断的数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>val</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>判断的值。</p></td>
         </tr>
 
     
@@ -2035,7 +2131,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
         
 <div class="param-desc">
-    <p>fn</p>
+    <p>该值在数组中出现的次数。</p>
 </div>
 
 
@@ -2046,7 +2142,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">function</span>
+<span class="param-type">number</span>
 
 
     </dd>
@@ -2061,7 +2157,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
     
 
-    <h4 class="name" id="deepFlatten"><span class="type-signature"></span>deepFlatten<span class="signature">(arr)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    <h4 class="name" id="deepFlatten"><span class="type-signature"></span>deepFlatten<span class="signature">(arr)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -2116,7 +2212,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
 
 <div class="description">
-    <p>Deep flattens an array.</p>
+    <p>深度扁平化一个数组。</p>
 </div>
 
 
@@ -2129,7 +2225,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>deepFlatten([1,[2],[[3],4],5]); // [1,2,3,4,5]</code></pre>
+    <pre class="prettyprint"><code>deepFlatten([1, [2], [[3], 4], 5]); // [1,2,3,4,5]</code></pre>
 
 
 
@@ -2175,7 +2271,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>要扁平化的数组。</p></td>
         </tr>
 
     
@@ -2201,7 +2297,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
         
 <div class="param-desc">
-    <p>fn</p>
+    <p>扁平化后的新数组。</p>
 </div>
 
 
@@ -2212,7 +2308,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
     </dt>
     <dd>
         
-<span class="param-type">function</span>
+<span class="param-type">array</span>
 
 
     </dd>
@@ -2227,7 +2323,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
     
 
-    <h4 class="name" id="difference"><span class="type-signature"></span>difference<span class="signature">(a)</span><span class="type-signature"> &rarr; {array}</span></h4>
+    <h4 class="name" id="difference"><span class="type-signature"></span>difference<span class="signature">(a, b)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -2239,7 +2335,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="difference.js.html">difference.js</a>, <a href="difference.js.html#line12">line 12</a>
+        <a href="difference.js.html">difference.js</a>, <a href="difference.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -2282,7 +2378,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
 
 <div class="description">
-    <p>Returns the difference between two arrays.</p>
+    <p>返回两个数组的差集。</p>
 </div>
 
 
@@ -2295,7 +2391,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>difference([1,2,3],[1,2,4]); // [3]</code></pre>
+    <pre class="prettyprint"><code>difference([1, 2, 3], [1, 2, 4]); // [3]</code></pre>
 
 
 
@@ -2341,7 +2437,30 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>第一个数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>第二个数组。</p></td>
         </tr>
 
     
@@ -2367,7 +2486,7 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
         
 <div class="param-desc">
-    <p>b The array every was called upon.</p>
+    <p>第一个数组与第二个数组的差集。</p>
 </div>
 
 
@@ -2461,9 +2580,9 @@ countBy(['one','two','three'], 'length'); // {3:2, 5:1}</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>differenceBy([2.1,1.2],[2.3,3.4],Math.floor); // [1]
+    <pre class="prettyprint"><code>differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor); // [1]
 
-differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
+differenceBy([{x:2}, {x:1}], [{x:1}], v=>v.x); // [2]</code></pre>
 
 
 
@@ -2545,7 +2664,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
             <td class="type">
             
                 
-<span class="param-type">array</span>
+<span class="param-type">function</span>
 
 
             
@@ -2619,7 +2738,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="differenceWith.js.html">differenceWith.js</a>, <a href="differenceWith.js.html#line16">line 16</a>
+        <a href="differenceWith.js.html">differenceWith.js</a>, <a href="differenceWith.js.html#line14">line 14</a>
     </li></ul></dd>
     
 
@@ -2675,9 +2794,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>differenceBy([2.1,1.2],[2.3,3.4],Math.floor); // [1]
-
-differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
+    <pre class="prettyprint"><code>differenceWith([1, 1.2, 1.5, 3, 0], [1.9, 3, 0], (a, b) => Math.round(a) === Math.round(b)); // [1, 1.2]</code></pre>
 
 
 
@@ -2736,7 +2853,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">array</span>
 
 
             
@@ -2821,7 +2938,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
     
 
-    <h4 class="name" id="drop"><span class="type-signature"></span>drop<span class="signature">(a, b, fn)</span><span class="type-signature"> &rarr; {array}</span></h4>
+    <h4 class="name" id="drop"><span class="type-signature"></span>drop<span class="signature">(arr, n)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -2833,7 +2950,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="drop.js.html">drop.js</a>, <a href="drop.js.html#line18">line 18</a>
+        <a href="drop.js.html">drop.js</a>, <a href="drop.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -2876,7 +2993,7 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
 
 <div class="description">
-    <p>Returns a new array with n elements removed from the left.</p>
+    <p>返回从左侧删除n个元素的新数组。</p>
 </div>
 
 
@@ -2889,11 +3006,11 @@ differenceBy([{x:2},{x:1}],[{x:1}],v=>v.x); // [2]</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>drop([1,2,3]); // [2,3]
+    <pre class="prettyprint"><code>drop([1, 2, 3]); // [2,3]
 
-drop([1,2,3],2); // [3]
+drop([1, 2, 3], 2); // [3]
 
-drop([1,2,3],42); // []</code></pre>
+drop([1, 2, 3], 42); // []</code></pre>
 
 
 
@@ -2913,6 +3030,8 @@ drop([1,2,3],42); // []</code></pre>
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -2923,7 +3042,7 @@ drop([1,2,3],42); // []</code></pre>
 
         <tr>
             
-                <td class="name"><code>a</code></td>
+                <td class="name"><code>arr</code></td>
             
 
             <td class="type">
@@ -2938,21 +3057,25 @@ drop([1,2,3],42); // []</code></pre>
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>原数组。</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>b</code></td>
+                <td class="name"><code>n</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">array</span>
+<span class="param-type">number</span>
 
 
             
@@ -2961,31 +3084,14 @@ drop([1,2,3],42); // []</code></pre>
             
 
             
-
-            <td class="description last"><p>The array every was called upon.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>fn</code></td>
-            
-
-            <td class="type">
-            
+                <td class="default">
                 
-<span class="param-type">array</span>
-
-
-            
-            </td>
-
+                    <code>1</code>
+                
+                </td>
             
 
-            
-
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>开始的索引位置。</p></td>
         </tr>
 
     
@@ -3011,7 +3117,7 @@ drop([1,2,3],42); // []</code></pre>
 
         
 <div class="param-desc">
-    <p>b The array every was called upon.</p>
+    <p>从指定索引开始的新数组。</p>
 </div>
 
 
@@ -3037,7 +3143,7 @@ drop([1,2,3],42); // []</code></pre>
 
     
 
-    <h4 class="name" id="dropRight"><span class="type-signature"></span>dropRight<span class="signature">(a, b, fn)</span><span class="type-signature"> &rarr; {array}</span></h4>
+    <h4 class="name" id="dropRight"><span class="type-signature"></span>dropRight<span class="signature">(arr, n)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -3049,7 +3155,7 @@ drop([1,2,3],42); // []</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dropRight.js.html">dropRight.js</a>, <a href="dropRight.js.html#line18">line 18</a>
+        <a href="dropRight.js.html">dropRight.js</a>, <a href="dropRight.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -3092,7 +3198,7 @@ drop([1,2,3],42); // []</code></pre>
 
 
 <div class="description">
-    <p>Returns a new array with n elements removed from the right.</p>
+    <p>返回从右侧删除n个元素的新数组。</p>
 </div>
 
 
@@ -3105,11 +3211,11 @@ drop([1,2,3],42); // []</code></pre>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>dropRight([1,2,3]); // [1,2]
+    <pre class="prettyprint"><code>dropRight([1, 2, 3]); // [1,2]
 
-dropRight([1,2,3],2); // [1]
+dropRight([1, 2, 3], 2); // [1]
 
-dropRight([1,2,3],42); // []</code></pre>
+dropRight([1, 2, 3], 42); // []</code></pre>
 
 
 
@@ -3129,6 +3235,8 @@ dropRight([1,2,3],42); // []</code></pre>
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -3139,7 +3247,7 @@ dropRight([1,2,3],42); // []</code></pre>
 
         <tr>
             
-                <td class="name"><code>a</code></td>
+                <td class="name"><code>arr</code></td>
             
 
             <td class="type">
@@ -3154,21 +3262,25 @@ dropRight([1,2,3],42); // []</code></pre>
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>原数组。</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>b</code></td>
+                <td class="name"><code>n</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">array</span>
+<span class="param-type">number</span>
 
 
             
@@ -3177,31 +3289,14 @@ dropRight([1,2,3],42); // []</code></pre>
             
 
             
-
-            <td class="description last"><p>The array every was called upon.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>fn</code></td>
-            
-
-            <td class="type">
-            
+                <td class="default">
                 
-<span class="param-type">array</span>
-
-
-            
-            </td>
-
+                    <code>1</code>
+                
+                </td>
             
 
-            
-
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>开始的索引。</p></td>
         </tr>
 
     
@@ -3227,7 +3322,7 @@ dropRight([1,2,3],42); // []</code></pre>
 
         
 <div class="param-desc">
-    <p>b The array every was called upon.</p>
+    <p>一个到右侧索引的新数组。</p>
 </div>
 
 
@@ -3253,7 +3348,7 @@ dropRight([1,2,3],42); // []</code></pre>
 
     
 
-    <h4 class="name" id="dropRightWhile"><span class="type-signature"></span>dropRightWhile<span class="signature">(arr, func, fn)</span><span class="type-signature"> &rarr; {array}</span></h4>
+    <h4 class="name" id="dropRightWhile"><span class="type-signature"></span>dropRightWhile<span class="signature">(arr, func)</span><span class="type-signature"> &rarr; {array}</span></h4>
 
     
 
@@ -3265,7 +3360,7 @@ dropRight([1,2,3],42); // []</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dropRightWhile.js.html">dropRightWhile.js</a>, <a href="dropRightWhile.js.html#line15">line 15</a>
+        <a href="dropRightWhile.js.html">dropRightWhile.js</a>, <a href="dropRightWhile.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -3308,8 +3403,7 @@ dropRight([1,2,3],42); // []</code></pre>
 
 
 <div class="description">
-    <p>Removes elements from the end of an array until the passed function returns true.
-Returns the remaining elements in the array.</p>
+    <p>从数组末尾移除元素，直到传递的函数返回true。返回数组中的其余元素。</p>
 </div>
 
 
@@ -3322,7 +3416,7 @@ Returns the remaining elements in the array.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>dropRightWhile([1,2,3,4], n=> n&lt;3); // [1,2]</code></pre>
+    <pre class="prettyprint"><code>dropRightWhile([1, 2, 3, 4], n=> n&lt;3); // [1,2]</code></pre>
 
 
 
@@ -3368,7 +3462,7 @@ Returns the remaining elements in the array.</p>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>原数组。</p></td>
         </tr>
 
     
@@ -3381,7 +3475,7 @@ Returns the remaining elements in the array.</p>
             <td class="type">
             
                 
-<span class="param-type">array</span>
+<span class="param-type">function</span>
 
 
             
@@ -3391,30 +3485,7 @@ Returns the remaining elements in the array.</p>
 
             
 
-            <td class="description last"><p>The array every was called upon.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>fn</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The array every was called upon.</p></td>
+            <td class="description last"><p>条件函数。</p></td>
         </tr>
 
     
@@ -3440,7 +3511,7 @@ Returns the remaining elements in the array.</p>
 
         
 <div class="param-desc">
-    <p>b The array every was called upon.</p>
+    <p>过滤后的新数组。</p>
 </div>
 
 
@@ -3534,7 +3605,7 @@ Returns the remaining elements in the array.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>dropWhile([1,2,3,4], n=>n>=3); // [3,4]</code></pre>
+    <pre class="prettyprint"><code>dropWhile([1, 2, 3, 4], n=> n >= 3); // [3,4]</code></pre>
 
 
 
@@ -3723,7 +3794,7 @@ Returns the remaining elements in the array.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>everyNth([1,2,3,4,5,6],2); // [2,4,6]</code></pre>
+    <pre class="prettyprint"><code>everyNth([1, 2, 3, 4, 5, 6], 2); // [2,4,6]</code></pre>
 
 
 
@@ -3912,7 +3983,7 @@ Returns the remaining elements in the array.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>filterFalsy(['',true,{},false,'sample',1,0]); // [true,{},'sample',1];</code></pre>
+    <pre class="prettyprint"><code>filterFalsy(['', true, {}, false, 'sample', 1, 0]); // [true,{},'sample',1];</code></pre>
 
 
 
@@ -4078,7 +4149,7 @@ Returns the remaining elements in the array.</p>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>filterNonUnique([1,2,2,3,4,4,5]); // [1,3,5]</code></pre>
+    <pre class="prettyprint"><code>filterNonUnique([1, 2, 2, 3, 4, 4, 5]); // [1,3,5]</code></pre>
 
 
 
@@ -4246,13 +4317,13 @@ Returns the remaining elements in the array.</p>
     
     <pre class="prettyprint"><code>filterNonUniqueBy(
    [
-     {id:0,value: 'a'},
-     {id:1,value: 'b'},
-     {id:2,value: 'c'},
-     {id:1,value: 'd'},
-     {id:0,value: 'e'}
+     {id: 0, value: 'a'},
+     {id: 1, value: 'b'},
+     {id: 2, value: 'c'},
+     {id: 1, value: 'd'},
+     {id: 0, value: 'e'}
    ],
-   (a,b)=>a.id==b.id
+   (a, b)=>a.id==b.id
 ); // [{id:2,value:'c'}]</code></pre>
 
 
@@ -4370,6 +4441,384 @@ Returns the remaining elements in the array.</p>
 
 
         
+            
+
+    
+
+    <h4 class="name" id="findLast"><span class="type-signature"></span>findLast<span class="signature">(arr, fn)</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="findLast.js.html">findLast.js</a>, <a href="findLast.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.0.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>返回所提供函数返回Truthy值的最后一个元素。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>findLast([1, 2, 3, 4], n=> n%2 ===1); // 3</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>函数。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>过滤后的值。</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="findLastIndex"><span class="type-signature"></span>findLastIndex<span class="signature">(arr, fn)</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="findLastIndex.js.html">findLastIndex.js</a>, <a href="findLastIndex.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since"><ul class="dummy"><li>0.0.1</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>返回最后一个元素的索引，为此提供的函数返回一个Truthy值。</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>findLastIndex([1, 2, 3, 4], n => n % 2 === 1); // 2 (index of the value 3)</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>数组。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>函数。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>过滤后的新值的原索引。</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
     
 
     
@@ -4389,7 +4838,7 @@ Returns the remaining elements in the array.</p>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Fri May 31 2019 07:39:10 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Wed Jun 05 2019 03:25:04 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

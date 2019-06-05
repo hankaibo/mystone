@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>bifurcateBy.js - Documentation</title>
+    <title>findLastIndex.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">bifurcateBy.js</h1>
+    <h1 class="page-title">findLastIndex.js</h1>
     
 
     
@@ -43,21 +43,23 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * 根据指定函数对数组进行过滤，符合条件的属于第一部分，否则属于第二部分。
+ * 返回最后一个元素的索引，为此提供的函数返回一个Truthy值。
  *
  * @since 0.0.1
- * @param {array} arr - 被判断的数组。
- * @param {function} fn - 指定的函数。
- * @returns {array} 一个新数组，第一部分是满足过滤函数的，第二部分是不满足的。
+ * @param {array} arr - 数组。
+ * @param {function} fn - 函数。
+ * @returns {number} 过滤后的新值的原索引。
  * @example
  *
- * bifurcate(['beep','boop','foo','bar'], x=>x[0]==='b'); // [['beep','boop','bar'], ['foo']]
+ * findLastIndex([1, 2, 3, 4], n => n % 2 === 1); // 2 (index of the value 3)
  */
 
-const bifurcateBy = (arr, fn) =>
-  arr.reduce((acc, val, i) => (acc[fn(val, i) ? 0 : 1].push(val), acc), [[], []]);
+const findLastIndex = (arr, fn) =>
+  arr.map((val, i) => [i, val])
+    .filter(([i, val]) => fn(val, i, arr))
+    .pop()[0];
 
-export default bifurcateBy;
+export default findLastIndex;
 </code></pre>
         </article>
     </section>
