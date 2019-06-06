@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>all.js - Documentation</title>
+    <title>indexOfAll.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">all.js</h1>
+    <h1 class="page-title">indexOfAll.js</h1>
     
 
     
@@ -43,21 +43,22 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * 判断数组中的所有元素是否可以通过测试函数.
+ * 返回数组中val的所有索引。如果val不存在，则返回[]。
  *
  * @since 0.0.1
- * @param {array} arr - 被迭代的数组。
- * @param {function} fn - 用于测试每个元素的函数。
- * @returns {boolean} 如果提供的函数对数组中的所有元素返回true，则返回true，否则返回false.
+ * @param {array} arr - 数组。
+ * @param {object} val - 指定的对象。
+ * @returns {array} 所有索引组成的数组。
  * @example
  *
- * all([4,2,3], x=>x>1); // true
+ * indexOfAll([1, 2, 3, 1, 2, 3], 1); // [0,3]
  *
- * all([1,2,3]); // true
+ * indexOfAll([1, 2, 3], 4); // []
  */
-const all = (arr, fn = Boolean) => arr.every(fn);
 
-export default all
+const indexOfAll = (arr, val) => arr.reduce((acc, el, i) => (el === val ? [...acc, i] : acc), []);
+
+export default indexOfAll;
 </code></pre>
         </article>
     </section>

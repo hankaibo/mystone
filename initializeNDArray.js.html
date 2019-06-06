@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>all.js - Documentation</title>
+    <title>initializeNDArray.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">all.js</h1>
+    <h1 class="page-title">initializeNDArray.js</h1>
     
 
     
@@ -43,21 +43,26 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * 判断数组中的所有元素是否可以通过测试函数.
+ * 使用指定的值初始化一个N维数组。
  *
  * @since 0.0.1
- * @param {array} arr - 被迭代的数组。
- * @param {function} fn - 用于测试每个元素的函数。
- * @returns {boolean} 如果提供的函数对数组中的所有元素返回true，则返回true，否则返回false.
+ * @param {object} val - 初始值。
+ * @param {object} args - 剩余参数。
+ * @returns {array} 数组。
  * @example
  *
- * all([4,2,3], x=>x>1); // true
+ * initializeNDArray(1, 3); // [1,1,1]
  *
- * all([1,2,3]); // true
+ * initializeNDArray(5, 2, 2, 2); // [[[5,5],[5,5]],[[5,5],[5,5]]]
  */
-const all = (arr, fn = Boolean) => arr.every(fn);
 
-export default all
+const initializeNDArray = (val, ...args) =>
+  args.length === 0
+    ? val
+    : Array.from({length: args[0]}).map(() => initializeNDArray(val, ...args.slice(1)));
+
+
+export default initializeNDArray;
 </code></pre>
         </article>
     </section>

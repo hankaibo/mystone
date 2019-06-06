@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>all.js - Documentation</title>
+    <title>head.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">all.js</h1>
+    <h1 class="page-title">head.js</h1>
     
 
     
@@ -43,21 +43,19 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * 判断数组中的所有元素是否可以通过测试函数.
+ * 返回数组第一个元素。
  *
  * @since 0.0.1
- * @param {array} arr - 被迭代的数组。
- * @param {function} fn - 用于测试每个元素的函数。
- * @returns {boolean} 如果提供的函数对数组中的所有元素返回true，则返回true，否则返回false.
+ * @param {array} arr - 数组。
+ * @returns {object} 首位元素。
  * @example
  *
- * all([4,2,3], x=>x>1); // true
- *
- * all([1,2,3]); // true
+ * head([1, 2, 7]); // 1
  */
-const all = (arr, fn = Boolean) => arr.every(fn);
 
-export default all
+const head = arr => arr[0];
+
+export default head;
 </code></pre>
         </article>
     </section>
