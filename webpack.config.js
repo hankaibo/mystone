@@ -20,9 +20,9 @@ module.exports = {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    library: 'mystone' || pkg.name,
+    filename: `${pkg.name}.js`,
     libraryTarget: 'umd',
-    filename: `${pkg.name}.js`
+    library: pkg.name, // 如果library为空，则方法挂载到全局window上；指定为变量，则挂载到相应变量上。
   },
   devtool: 'source-map',
   module: {

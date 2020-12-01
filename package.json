@@ -2,7 +2,7 @@
   "name": "mystone",
   "version": "0.0.1",
   "description": "A tool library for me.",
-  "main": "index.js",
+  "main": "./dist/mystone.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "docs": "jsdoc -c jsdoc.json"
