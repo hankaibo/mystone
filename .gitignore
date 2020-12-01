@@ -21,3 +21,6 @@ package-lock.json
 # visual studio code
 .history
 *.log
+
+docs
+dist
